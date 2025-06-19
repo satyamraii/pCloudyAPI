@@ -1,0 +1,10 @@
+com/api/testing/main/NetworkSimulation.class
+com/api/testing/utils/JsonPayload.class
+com/api/testing/utils/SearchInstallAPP.class
+com/api/testing/main/Runner.class
+com/api/testing/main/AppiumAutomationAPI.class
+com/api/testing/utils/ApiMethods.class
+com/api/testing/main/ManulifeAPI.class
+com/api/testing/utils/ApiEndPoints.class
+com/api/testing/utils/JsonUtil.class
+com/api/testing/main/VisualOCR.class

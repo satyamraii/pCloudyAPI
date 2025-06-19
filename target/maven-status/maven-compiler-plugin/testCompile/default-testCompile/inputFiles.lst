@@ -1,0 +1,10 @@
+/home/administrator/RestAPI/API-Testing/src/test/java/com/api/testing/main/ManulifeAPI.java
+/home/administrator/RestAPI/API-Testing/src/test/java/com/api/testing/utils/ApiMethods.java
+/home/administrator/RestAPI/API-Testing/src/test/java/com/api/testing/utils/SearchInstallAPP.java
+/home/administrator/RestAPI/API-Testing/src/test/java/com/api/testing/main/Runner.java
+/home/administrator/RestAPI/API-Testing/src/test/java/com/api/testing/utils/ApiEndPoints.java
+/home/administrator/RestAPI/API-Testing/src/test/java/com/api/testing/utils/JsonPayload.java
+/home/administrator/RestAPI/API-Testing/src/test/java/com/api/testing/main/NetworkSimulation.java
+/home/administrator/RestAPI/API-Testing/src/test/java/com/api/testing/main/AppiumAutomationAPI.java
+/home/administrator/RestAPI/API-Testing/src/test/java/com/api/testing/utils/JsonUtil.java
+/home/administrator/RestAPI/API-Testing/src/test/java/com/api/testing/main/VisualOCR.java

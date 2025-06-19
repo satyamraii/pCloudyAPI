@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>21/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Apr 15 22:11:58 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>99 seconds (99540 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.bookDeviceForAppium()'><b>bookDeviceForAppium</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.captureDeviceScreenshot()'><b>captureDeviceScreenshot</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.downloadAppiumPerformanceData()'><b>downloadAppiumPerformanceData</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.downloadFile()'><b>downloadFile</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.downloadManualAccessData()'><b>downloadManualAccessData</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.getAppiumEndpoint()'><b>getAppiumEndpoint</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.getAppiumFileName()'><b>getAppiumFileName</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>5</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.getAppiumReportFolder()'><b>getAppiumReportFolder</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.getAuthToken()'><b>getAuthToken</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>17</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.getAvailableAppiumVersion()'><b>getAvailableAppiumVersion</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.getAvailableApps()'><b>getAvailableApps</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.getAvailableDeviceList()'><b>getAvailableDeviceList</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>1</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.getPlayerType()'><b>getPlayerType</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.getShareableReportLink()'><b>getShareableReportLink</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.getUserInfo()'><b>getUserInfo</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.installApp()'><b>installApp</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>3</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.releaseAppiumDevice()'><b>releaseAppiumDevice</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>6</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.startAutomation()'><b>startAutomation</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>23</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.startDeviceService()'><b>startDeviceService</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>15</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.startStreamer()'><b>startStreamer</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>23</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+<tr>
+<td title='com.api.testing.main.AppiumAutomationAPI.unlockIOSDevice()'><b>unlockIOSDevice</b><br>Test class: com.api.testing.main.AppiumAutomationAPI</td>
+<td></td>
+<td>0</td>
+<td>com.api.testing.main.AppiumAutomationAPI@101952da</td></tr>
+</table><p>
+</body>
+</html>
