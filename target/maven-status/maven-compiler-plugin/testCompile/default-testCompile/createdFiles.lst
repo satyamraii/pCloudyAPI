@@ -7,4 +7,6 @@ com/api/testing/utils/ApiMethods.class
 com/api/testing/main/ManulifeAPI.class
 com/api/testing/utils/ApiEndPoints.class
 com/api/testing/utils/JsonUtil.class
+com/api/testing/main/AppInstrument.class
+com/api/testing/main/XCUITestAPI.class
 com/api/testing/main/VisualOCR.class

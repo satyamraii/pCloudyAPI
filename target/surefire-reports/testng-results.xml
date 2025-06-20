@@ -2,84 +2,84 @@
 <testng-results ignored="0" total="19" passed="19" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-16T14:06:49Z" name="pCloudy Suite" finished-at="2025-04-16T14:07:40Z" duration-ms="50897">
+  <suite started-at="2025-06-19T15:28:14Z" name="pCloudy Suite" finished-at="2025-06-19T15:31:37Z" duration-ms="202404">
     <groups>
     </groups>
-    <test started-at="2025-04-16T14:06:49Z" name="Test" finished-at="2025-04-16T14:07:40Z" duration-ms="50897">
+    <test started-at="2025-06-19T15:28:14Z" name="Test" finished-at="2025-06-19T15:31:37Z" duration-ms="202404">
       <class name="com.api.testing.main.AppiumAutomationAPI">
-        <test-method signature="getAuthToken()[pri:1, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:36:49Z" name="getAuthToken" finished-at="2025-04-16T19:37:06Z" duration-ms="16730" status="PASS">
+        <test-method signature="getAuthToken()[pri:1, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T20:58:14Z" name="getAuthToken" finished-at="2025-06-19T20:58:41Z" duration-ms="26529" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAuthToken -->
-        <test-method signature="getUserInfo()[pri:2, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:06Z" name="getUserInfo" finished-at="2025-04-16T19:37:06Z" duration-ms="225" status="PASS">
+        <test-method signature="getUserInfo()[pri:2, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T20:58:41Z" name="getUserInfo" finished-at="2025-06-19T20:58:51Z" duration-ms="10380" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserInfo -->
-        <test-method signature="getAvailableDeviceList()[pri:3, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:06Z" name="getAvailableDeviceList" finished-at="2025-04-16T19:37:07Z" duration-ms="776" status="PASS">
+        <test-method signature="getAvailableDeviceList()[pri:3, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T20:58:51Z" name="getAvailableDeviceList" finished-at="2025-06-19T20:58:52Z" duration-ms="890" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAvailableDeviceList -->
-        <test-method signature="bookDeviceForAppium()[pri:4, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:07Z" name="bookDeviceForAppium" finished-at="2025-04-16T19:37:08Z" duration-ms="791" status="PASS">
+        <test-method signature="bookDeviceForAppium()[pri:4, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T20:58:52Z" name="bookDeviceForAppium" finished-at="2025-06-19T20:58:55Z" duration-ms="2332" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookDeviceForAppium -->
-        <test-method signature="startStreamer()[pri:5, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:08Z" name="startStreamer" finished-at="2025-04-16T19:37:08Z" duration-ms="169" status="PASS">
+        <test-method signature="startStreamer()[pri:5, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T20:58:55Z" name="startStreamer" finished-at="2025-06-19T20:59:20Z" duration-ms="25455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startStreamer -->
-        <test-method signature="unlockIOSDevice()[pri:6, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:08Z" name="unlockIOSDevice" finished-at="2025-04-16T19:37:08Z" duration-ms="147" status="PASS">
+        <test-method signature="unlockIOSDevice()[pri:6, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T20:59:20Z" name="unlockIOSDevice" finished-at="2025-06-19T20:59:35Z" duration-ms="15281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unlockIOSDevice -->
-        <test-method signature="getAvailableApps()[pri:7, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:08Z" name="getAvailableApps" finished-at="2025-04-16T19:37:09Z" duration-ms="497" status="PASS">
+        <test-method signature="getAvailableApps()[pri:7, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T20:59:35Z" name="getAvailableApps" finished-at="2025-06-19T20:59:46Z" duration-ms="11155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAvailableApps -->
-        <test-method signature="installApp()[pri:8, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:09Z" name="installApp" finished-at="2025-04-16T19:37:11Z" duration-ms="2197" status="PASS">
+        <test-method signature="installApp()[pri:8, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T20:59:46Z" name="installApp" finished-at="2025-06-19T20:59:52Z" duration-ms="5224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- installApp -->
-        <test-method signature="startAutomation()[pri:9, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:11Z" name="startAutomation" finished-at="2025-04-16T19:37:19Z" duration-ms="7679" status="PASS">
+        <test-method signature="startAutomation()[pri:9, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T20:59:52Z" name="startAutomation" finished-at="2025-06-19T21:00:21Z" duration-ms="29154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startAutomation -->
-        <test-method signature="captureDeviceScreenshot()[pri:10, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:19Z" name="captureDeviceScreenshot" finished-at="2025-04-16T19:37:20Z" duration-ms="919" status="PASS">
+        <test-method signature="captureDeviceScreenshot()[pri:10, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T21:00:21Z" name="captureDeviceScreenshot" finished-at="2025-06-19T21:00:37Z" duration-ms="15881" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureDeviceScreenshot -->
-        <test-method signature="getPlayerType()[pri:11, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:20Z" name="getPlayerType" finished-at="2025-04-16T19:37:20Z" duration-ms="160" status="PASS">
+        <test-method signature="getPlayerType()[pri:11, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T21:00:37Z" name="getPlayerType" finished-at="2025-06-19T21:00:47Z" duration-ms="10284" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPlayerType -->
-        <test-method signature="startDeviceService()[pri:12, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:20Z" name="startDeviceService" finished-at="2025-04-16T19:37:24Z" duration-ms="4239" status="PASS">
+        <test-method signature="startDeviceService()[pri:12, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T21:00:47Z" name="startDeviceService" finished-at="2025-06-19T21:01:02Z" duration-ms="15294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDeviceService -->
-        <test-method signature="getAppiumEndpoint()[pri:15, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:24Z" name="getAppiumEndpoint" finished-at="2025-04-16T19:37:24Z" duration-ms="146" status="PASS">
+        <test-method signature="getAppiumEndpoint()[pri:15, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T21:01:02Z" name="getAppiumEndpoint" finished-at="2025-06-19T21:01:18Z" duration-ms="15246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAppiumEndpoint -->
-        <test-method signature="getAppiumReportFolder()[pri:16, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:24Z" name="getAppiumReportFolder" finished-at="2025-04-16T19:37:24Z" duration-ms="143" status="PASS">
+        <test-method signature="getAppiumReportFolder()[pri:16, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T21:01:18Z" name="getAppiumReportFolder" finished-at="2025-06-19T21:01:28Z" duration-ms="10234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAppiumReportFolder -->
-        <test-method signature="getShareableReportLink()[pri:17, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:24Z" name="getShareableReportLink" finished-at="2025-04-16T19:37:34Z" duration-ms="9946" status="PASS">
+        <test-method signature="getShareableReportLink()[pri:17, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T21:01:28Z" name="getShareableReportLink" finished-at="2025-06-19T21:01:32Z" duration-ms="3874" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getShareableReportLink -->
-        <test-method signature="downloadManualAccessData()[pri:18, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:34Z" name="downloadManualAccessData" finished-at="2025-04-16T19:37:34Z" duration-ms="153" status="PASS">
+        <test-method signature="downloadManualAccessData()[pri:18, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T21:01:32Z" name="downloadManualAccessData" finished-at="2025-06-19T21:01:32Z" duration-ms="195" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- downloadManualAccessData -->
-        <test-method signature="downloadFile()[pri:19, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:34Z" name="downloadFile" finished-at="2025-04-16T19:37:35Z" duration-ms="158" status="PASS">
+        <test-method signature="downloadFile()[pri:19, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T21:01:32Z" name="downloadFile" finished-at="2025-06-19T21:01:32Z" duration-ms="270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- downloadFile -->
-        <test-method signature="getAvailableAppiumVersion()[pri:20, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:35Z" name="getAvailableAppiumVersion" finished-at="2025-04-16T19:37:35Z" duration-ms="176" status="PASS">
+        <test-method signature="getAvailableAppiumVersion()[pri:20, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T21:01:32Z" name="getAvailableAppiumVersion" finished-at="2025-06-19T21:01:32Z" duration-ms="193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAvailableAppiumVersion -->
-        <test-method signature="releaseAppiumDevice()[pri:21, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-04-16T19:37:35Z" name="releaseAppiumDevice" finished-at="2025-04-16T19:37:40Z" duration-ms="5548" status="PASS">
+        <test-method signature="releaseAppiumDevice()[pri:21, instance:com.api.testing.main.AppiumAutomationAPI@5e5d171f]" started-at="2025-06-19T21:01:32Z" name="releaseAppiumDevice" finished-at="2025-06-19T21:01:37Z" duration-ms="4401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- releaseAppiumDevice -->

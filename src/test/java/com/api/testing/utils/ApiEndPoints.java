@@ -2,7 +2,7 @@ package com.api.testing.utils;
 
 public class ApiEndPoints {
 	
-	public static final String BASE_URL = "https://staging.pcloudy.com";
+	public static final String BASE_URL = "https://device.pcloudy.com";
 
     public static final String ACCESS_TOKEN = BASE_URL + "/api/access";
     public static final String DEVICE_LIST = BASE_URL + "/api/devices";

@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="20" passed="20" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-15T13:11:28Z" name="Default suite" finished-at="2025-06-15T13:18:05Z" duration-ms="396907">
+  <suite started-at="2025-06-20T12:07:54Z" name="pCloudy Suite" finished-at="2025-06-20T12:11:58Z" duration-ms="244042">
     <groups>
     </groups>
-    <test started-at="2025-06-15T13:11:28Z" name="Default test" finished-at="2025-06-15T13:18:05Z" duration-ms="396907">
-      <class name="com.api.testing.main.XCUITestAPI">
-        <test-method signature="getAuthToken()[pri:1, instance:com.api.testing.main.XCUITestAPI@3f91b517]" started-at="2025-06-15T18:41:28Z" name="getAuthToken" finished-at="2025-06-15T18:41:35Z" duration-ms="6960" status="PASS">
+    <test started-at="2025-06-20T12:07:54Z" name="Test" finished-at="2025-06-20T12:11:58Z" duration-ms="244042">
+      <class name="com.api.testing.main.AppiumAutomationAPI">
+        <test-method signature="getAuthToken()[pri:1, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:38:58Z" name="getAuthToken" finished-at="2025-06-20T17:39:13Z" duration-ms="15279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAuthToken -->
-        <test-method signature="getDeviceList()[pri:2, instance:com.api.testing.main.XCUITestAPI@3f91b517]" started-at="2025-06-15T18:41:35Z" name="getDeviceList" finished-at="2025-06-15T18:41:46Z" duration-ms="11045" status="PASS">
+        <test-method signature="getUserInfo()[pri:2, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:39:13Z" name="getUserInfo" finished-at="2025-06-20T17:39:23Z" duration-ms="10232" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getDeviceList -->
-        <test-method signature="bookDevice()[pri:3, instance:com.api.testing.main.XCUITestAPI@3f91b517]" started-at="2025-06-15T18:41:46Z" name="bookDevice" finished-at="2025-06-15T18:41:48Z" duration-ms="1204" status="PASS">
+        </test-method> <!-- getUserInfo -->
+        <test-method signature="getAvailableDeviceList()[pri:3, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:39:23Z" name="getAvailableDeviceList" finished-at="2025-06-20T17:39:24Z" duration-ms="417" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bookDevice -->
-        <test-method signature="getAvailableApps()[pri:4, instance:com.api.testing.main.XCUITestAPI@3f91b517]" started-at="2025-06-15T18:41:48Z" name="getAvailableApps" finished-at="2025-06-15T18:41:48Z" duration-ms="628" status="PASS">
+        </test-method> <!-- getAvailableDeviceList -->
+        <test-method signature="bookDeviceForAppium()[pri:4, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:39:24Z" name="bookDeviceForAppium" finished-at="2025-06-20T17:39:26Z" duration-ms="2462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookDeviceForAppium -->
+        <test-method signature="startStreamer()[pri:5, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:39:26Z" name="startStreamer" finished-at="2025-06-20T17:39:48Z" duration-ms="21615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startStreamer -->
+        <test-method signature="unlockIOSDevice()[pri:6, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:39:48Z" name="unlockIOSDevice" finished-at="2025-06-20T17:40:03Z" duration-ms="15207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unlockIOSDevice -->
+        <test-method signature="getAvailableApps()[pri:7, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:40:03Z" name="getAvailableApps" finished-at="2025-06-20T17:40:14Z" duration-ms="11274" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAvailableApps -->
-        <test-method signature="startXCTestAutomation()[pri:5, instance:com.api.testing.main.XCUITestAPI@3f91b517]" started-at="2025-06-15T18:41:48Z" name="startXCTestAutomation" finished-at="2025-06-15T18:41:50Z" duration-ms="2073" status="PASS">
+        <test-method signature="installApp()[pri:8, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:40:14Z" name="installApp" finished-at="2025-06-20T17:40:19Z" duration-ms="5323" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startXCTestAutomation -->
-        <test-method signature="xcTestStartDeviceService()[pri:6, instance:com.api.testing.main.XCUITestAPI@3f91b517]" started-at="2025-06-15T18:41:50Z" name="xcTestStartDeviceService" finished-at="2025-06-15T18:46:50Z" duration-ms="300185" status="FAIL">
-          <exception class="io.restassured.path.json.exception.JsonPathException">
-            <message>
-              <![CDATA[Failed to parse the JSON document]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.toJsonString(JsonPath.java:1064)
-	at io.restassured.path.json.JsonPath.prettify(JsonPath.java:685)
-	at com.api.testing.utils.JsonUtil.printFormattedJson(JsonUtil.java:9)
-	at com.api.testing.main.XCUITestAPI.xcTestStartDeviceService(XCUITestAPI.java:99)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading '<', no possible valid JSON value or punctuation could be recognized.
-	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
-	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	... 31 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.restassured.path.json.exception.JsonPathException -->
+        </test-method> <!-- installApp -->
+        <test-method signature="startAutomation()[pri:9, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:40:19Z" name="startAutomation" finished-at="2025-06-20T17:40:45Z" duration-ms="26055" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- xcTestStartDeviceService -->
-        <test-method signature="releaseXCTestDevice()[pri:7, instance:com.api.testing.main.XCUITestAPI@3f91b517]" started-at="2025-06-15T18:46:50Z" name="releaseXCTestDevice" finished-at="2025-06-15T18:47:06Z" duration-ms="15552" status="PASS">
+        </test-method> <!-- startAutomation -->
+        <test-method signature="captureDeviceScreenshot()[pri:10, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:40:45Z" name="captureDeviceScreenshot" finished-at="2025-06-20T17:41:02Z" duration-ms="16528" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- releaseXCTestDevice -->
-        <test-method signature="xcTestShareableReportLink()[pri:8, instance:com.api.testing.main.XCUITestAPI@3f91b517]" started-at="2025-06-15T18:47:06Z" name="xcTestShareableReportLink" finished-at="2025-06-15T18:48:05Z" duration-ms="59114" status="PASS">
+        </test-method> <!-- captureDeviceScreenshot -->
+        <test-method signature="getPlayerType()[pri:11, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:41:02Z" name="getPlayerType" finished-at="2025-06-20T17:41:12Z" duration-ms="10294" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- xcTestShareableReportLink -->
-      </class> <!-- com.api.testing.main.XCUITestAPI -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- getPlayerType -->
+        <test-method signature="startDeviceService()[pri:12, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:41:12Z" name="startDeviceService" finished-at="2025-06-20T17:41:28Z" duration-ms="15302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDeviceService -->
+        <test-method signature="getAppiumEndpoint()[pri:15, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:41:28Z" name="getAppiumEndpoint" finished-at="2025-06-20T17:41:43Z" duration-ms="15215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAppiumEndpoint -->
+        <test-method signature="getAppiumReportFolder()[pri:16, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:41:43Z" name="getAppiumReportFolder" finished-at="2025-06-20T17:41:53Z" duration-ms="10246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAppiumReportFolder -->
+        <test-method signature="getShareableReportLink()[pri:17, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:41:53Z" name="getShareableReportLink" finished-at="2025-06-20T17:41:53Z" duration-ms="325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getShareableReportLink -->
+        <test-method signature="downloadManualAccessData()[pri:18, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:41:53Z" name="downloadManualAccessData" finished-at="2025-06-20T17:41:54Z" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadManualAccessData -->
+        <test-method signature="downloadFile()[pri:19, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:41:54Z" name="downloadFile" finished-at="2025-06-20T17:41:54Z" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadFile -->
+        <test-method signature="getAvailableAppiumVersion()[pri:20, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:41:54Z" name="getAvailableAppiumVersion" finished-at="2025-06-20T17:41:54Z" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAvailableAppiumVersion -->
+        <test-method signature="releaseAppiumDevice()[pri:21, instance:com.api.testing.main.AppiumAutomationAPI@101952da]" started-at="2025-06-20T17:41:54Z" name="releaseAppiumDevice" finished-at="2025-06-20T17:41:58Z" duration-ms="4346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- releaseAppiumDevice -->
+      </class> <!-- com.api.testing.main.AppiumAutomationAPI -->
+      <class name="com.api.testing.main.VisualOCR">
+        <test-method signature="visualOCR()[pri:0, instance:com.api.testing.main.VisualOCR@24fcf36f]" started-at="2025-06-20T17:37:54Z" name="visualOCR" finished-at="2025-06-20T17:38:57Z" duration-ms="63067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- visualOCR -->
+      </class> <!-- com.api.testing.main.VisualOCR -->
+    </test> <!-- Test -->
+  </suite> <!-- pCloudy Suite -->
 </testng-results>

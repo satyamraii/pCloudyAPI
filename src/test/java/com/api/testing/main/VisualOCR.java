@@ -18,7 +18,7 @@ public class VisualOCR {
 	public void visualOCR() {
 
 		String userName = "satyam.kumar@sstsinc.com";
-		String apiKey = "zdxyqzq63zbrr8zfvdj6dypg";
+		String apiKey = "hmww27d3dj44rs4zmxbx8vhf";
 
 		// Get access token
 		String response = ApiMethods.executeApiCall("GET", userName, apiKey, null, null, ApiEndPoints.ACCESS_TOKEN, null);

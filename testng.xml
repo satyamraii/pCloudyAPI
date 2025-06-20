@@ -5,6 +5,8 @@
   <test name="Test">
     <classes>
       <class name="com.api.testing.main.AppiumAutomationAPI"/>
+      <class name="com.api.testing.main.VisualOCR"/>
+      
     </classes>
     
   </test> <!-- Test -->
