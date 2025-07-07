@@ -23,7 +23,7 @@ public class XCUITestAPI {
 	public static void getAuthToken() {
 	    
 		String userName = "satyam.kumar@sstsinc.com";
-		String apiKey = "zdxyqzq63zbrr8zfvdj6dypg";
+		String apiKey = "jpyb6557kvsbgmj82gw82vng";
 
 	    
 		String response = ApiMethods.executeApiCall("GET", userName, apiKey, null, null, ApiEndPoints.ACCESS_TOKEN, null);

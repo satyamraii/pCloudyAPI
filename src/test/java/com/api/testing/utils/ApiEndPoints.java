@@ -63,5 +63,22 @@ public class ApiEndPoints {
     public static final String RELEASE_XCTESTDEVICE = BASE_URL + "/api/automationrelease";
     public static final String XCTESTSHREABLE_REPORTLINK = BASE_URL + "/api/getAutomationShareableReportLink";
     
+    //App Instrumentation
+    public static final String INITIATE_APP_INSTRUMENTATION = BASE_URL + "/api/app_instrumentation/initiate";
+    public static final String INSTRUMENTATION_PROGRESS = BASE_URL + "/api/app_instrumentation/progress";
+    public static final String DOWNLOAD_INSTRUMENTATION_APK = BASE_URL + "/api/app_instrumentation/download-to-cloud-drive";
+    
+    //Biometric Authentication
+    public static final String BIOMETRIC_AUTHENTICATION = BASE_URL + "/api/fingerprint_auth";
+    
+    //Image Injection
+    public static final String IMAGE_INJECT = BASE_URL + "/api/imageInject";
+    
+    //IPA Resign
+    public static final String INITIATE_RESIGN = BASE_URL + "/api/resign/initiate";
+    public static final String RESIGN_PROGRESS = BASE_URL + "/api/resign/progress";
+    public static final String RESIGN_DOWNLOAD = BASE_URL + "/api/resign/download";
+    public static final String RESIGN_IPA = BASE_URL + "/api/rename";
+    
     
 }

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite configfailurepolicy="continue" thread-count="1" parallel="tests" name="Failed suite [pCloudy Suite]" guice-stage="DEVELOPMENT">
-  <test parallel="tests" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
     <classes>
       <class name="com.api.testing.main.VisualOCR">
         <methods>
-          <include name="visualOCR"/>
+          <include name="setup"/>
+          <include name="testGetAllOcrText"/>
+          <include name="testTextExist"/>
+          <include name="tearDown"/>
+          <include name="testCompareImages"/>
+          <include name="testTextCoordinates"/>
         </methods>
       </class> <!-- com.api.testing.main.VisualOCR -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [pCloudy Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

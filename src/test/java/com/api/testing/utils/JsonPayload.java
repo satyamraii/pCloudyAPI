@@ -466,7 +466,93 @@ public class JsonPayload {
     			+ "}";
     }
     
+    //Instrumentation Initiate Biometric
+    public static String initiateInstrumentationBiometric(String token, String targetFileName) {
+    	
+    	return "{\n"
+    			+ "    \"token\": \"" + token + "\",\n"
+    			+ "    \"fileName\": \"" + targetFileName + "\",\n"
+    			+ "    \"isImageInjection\": \"false\",\n"
+    			+ "    \"isBiometricAuth\": \"true\"\n"
+    			+ "}";
+    }
     
+  //Instrumentation Initiate InjectImage
+    public static String initiateInstrumentationImageInjection(String token, String targetFileName) {
+        return "{\n"
+            + "    \"token\": \"" + token + "\",\n"
+            + "    \"fileName\": \"" + targetFileName + "\",\n"
+            + "    \"isImageInjection\": true,\n"
+            + "    \"isBiometricAuth\": false\n"
+            + "}";
+    }
+    
+    //Instrumentation Progress
+    public static String instrumentationProgress(String token, String instrumentationToken) {
+    	
+    	return "{\n"
+    			+ "    \"token\": \"" + token + "\",\n"
+    			+ "    \"instrumentation-token\": \"" + instrumentationToken + "\"\n"
+    			+ "}";
+    }
+    
+    //Download Instrument APK
+    public static String downloadInstrumentAPK(String token,String instrumentationToken) {
+    	
+    	return "{\n"
+    			+ "    \"token\": \"" + token + "\",\n"
+    			+ "    \"instrumentation-token\": \"" + instrumentationToken + "\"\n"
+    			+ "}";
+    }
+    
+    //Biometric Authentication
+    public static String biometricAuth(String token, int rid) {
+    	
+    	return "{\n"
+    			+ "  \"token\": \"" + token + "\",\n"
+    			+ "  \"rid\": " + rid + ",\n"
+    			+ "  \"auth_state\": true\n"
+    			+ "}";
+    }
+    
+    //Image Injection
+    public static String imageInject(String token, int rid) {
+        return "{\n"
+            + "    \"token\": \"" + token + "\",\n"
+            + "    \"rid\": " + rid + ",\n"
+            + "    \"fileName\": \"QR_code_G.png\"\n"
+            + "}";
+    }
+
+    //Initiating Resign
+    public static String resignInitiate(String token, String targetFileName) {
+    	 return "{\n" +
+    	           "\t\"token\":\"" + token + "\",\n" +
+    	           "\t\"filename\": \"" + targetFileName + "\"\n" +
+    	           "}";
+    }
+    
+    //ResignProgress
+    public static String resignProgress(String token,String resignToken,String resignFileName) {
+    	return "{\n" +
+    	           "    \"token\": \"" + token + "\",\n" +
+    	           "    \"resign_token\": \"" + resignToken + "\",\n" +
+    	           "    \"filename\": \"" + resignFileName + "\"\n" +
+    	           "}";
+   }
+    
+    //Resign Download
+    public static String resignDownload(String token,String resignToken,String resignFileName) {
+    	return "{\n" +
+    	           "    \"token\": \"" + token + "\",\n" +
+    	           "    \"resign_token\": \"" + resignToken + "\",\n" +
+    	           "    \"filename\": \"" + resignFileName + "\"\n" +
+    	           "}";
+   }
+    
+    
+    
+   
     //Release-device
     public static String releaseAppiumDevice (String token,int rid) {
 

@@ -1,9 +1,11 @@
 package com.api.testing.main;
 
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-import java.io.File;
+import org.testng.Assert;
 
-import org.testng.annotations.Test;
+import java.io.File;
 
 import com.api.testing.utils.ApiEndPoints;
 import com.api.testing.utils.ApiMethods;
@@ -14,72 +16,131 @@ import io.restassured.path.json.JsonPath;
 
 public class VisualOCR {
 
-	@Test
-	public void visualOCR() {
+	private String userName = "satyam.kumar@sstsinc.com";
+	private String apiKey = "hmww27d3dj44rs4zmxbx8vhf";
 
-		String userName = "satyam.kumar@sstsinc.com";
-		String apiKey = "hmww27d3dj44rs4zmxbx8vhf";
+	private String token;
+	private String deviceId;
+	private int rid;
+	private String fileId1;
+	private String fileId2;
 
-		// Get access token
-		String response = ApiMethods.executeApiCall("GET", userName, apiKey, null, null, ApiEndPoints.ACCESS_TOKEN, null);
-		String token = response.split("\"token\":\"")[1].split("\"")[0];
-
-		// Get device list and first deviceIdsss
-		String deviceListBody = JsonPayload.getDeviceListRequest(token);
-		JsonPath deviceListJson = JsonUtil.printFormattedJson(
-				ApiMethods.executeApiCall("POST", null, null, null, deviceListBody, ApiEndPoints.DEVICE_LIST, null));
-
-		String deviceId = deviceListJson.getString("result.models[0].id");
-
-		// Get device details
-		JsonUtil.printFormattedJson(
-				ApiMethods.executeApiCall("POST", null, null, null,
-						JsonPayload.getDeviceDetailsRequest(token, deviceId), ApiEndPoints.GET_DEVICES_DETAILS, null));
-
-		// Book the device
-		JsonPath bookDeviceJson = JsonUtil.printFormattedJson(
-				ApiMethods.executeApiCall("POST", null, null, null,
-						JsonPayload.bookDeviceRequest(token, deviceId), ApiEndPoints.BOOK_DEVICE, null));
-
-		int rid = bookDeviceJson.getInt("result.rid");
-
-		// Upload file 1
-		String fileId1 = JsonUtil.printFormattedJson(
-				ApiMethods.executeApiCall("POST", null, null, token, null,
-						ApiEndPoints.UPLOAD_IMAGE, new File("/home/administrator/Image Collection/demoimg.png")))
-				.getString("data.fileId");
-
-		// Upload file 2
-		String fileId2 = JsonUtil.printFormattedJson(
-				ApiMethods.executeApiCall("POST", null, null, token, null,
-						ApiEndPoints.UPLOAD_IMAGE, new File("/home/administrator/Image Collection/Demoimg2.png")))
-				.getString("data.fileId");
-
-		// Verify text exists
-		JsonUtil.printFormattedJson(
-				ApiMethods.executeApiCall("POST", null, null, token,
-						JsonPayload.textExist(rid, fileId1), ApiEndPoints.TEXT_EXIST, null));
-
-		// Verify text coordinates
-		JsonUtil.printFormattedJson(
-				ApiMethods.executeApiCall("POST", null, null, token,
-						JsonPayload.textCoordinate(rid, fileId1), ApiEndPoints.TEXT_COORDINATE, null));
-
-		// Get all OCR text
-		JsonUtil.printFormattedJson(
-				ApiMethods.executeApiCall("POST", null, null, token,
-						JsonPayload.getAllText(rid, fileId1), ApiEndPoints.OCR_ALLTEXT, null));
-
-		// Compare images
-		JsonUtil.printFormattedJson(
-				ApiMethods.executeApiCall("POST", null, null, token,
-						JsonPayload.imageCompare(rid, fileId1, fileId2), ApiEndPoints.OCR_IMAGECOMPARE, null));
-
-		//Release device
-		String releaseDevice= JsonPayload.releaseDevice(token, rid);
-		System.out.println("Request response is: "+ releaseDevice);
-		JsonPath deviceRelease= JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null, releaseDevice, ApiEndPoints.RELEASE_DEVICE, null));
-		System.out.println("Device has been released");
+	@BeforeClass
+	public void setup() {
+		try {
+			token = getAccessToken();
+			deviceId = getDeviceId(token);
+			getDeviceDetails(token, deviceId);
+			rid = bookDevice(token, deviceId);
+			fileId1 = uploadImage(token, "/home/administrator/Image Collection/demoimg.png");
+			fileId2 = uploadImage(token, "/home/administrator/Image Collection/Demoimg2.png");
+		} catch (Exception e) {
+			System.err.println("Setup failed: " + e.getMessage());
+			Assert.fail("Test setup failed due to: " + e.getMessage());
+		}
 	}
 
+	@AfterClass
+	public void tearDown() {
+		try {
+			releaseDevice(token, rid);
+		} catch (Exception e) {
+			System.err.println("Device release failed: " + e.getMessage());
+		}
+	}
+
+	@Test(priority = 1)
+	public void testTextExist() {
+		try {
+			JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, token,
+					JsonPayload.textExist(rid, fileId1), ApiEndPoints.TEXT_EXIST, null));
+		} catch (Exception e) {
+			Assert.fail("TextExist API failed: " + e.getMessage());
+		}
+	}
+
+	@Test(priority = 2)
+	public void testTextCoordinates() {
+		try {
+			JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, token,
+					JsonPayload.textCoordinate(rid, fileId1), ApiEndPoints.TEXT_COORDINATE, null));
+		} catch (Exception e) {
+			Assert.fail("TextCoordinate API failed: " + e.getMessage());
+		}
+	}
+
+	@Test(priority = 3)
+	public void testGetAllOcrText() {
+		try {
+			JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, token,
+					JsonPayload.getAllText(rid, fileId1), ApiEndPoints.OCR_ALLTEXT, null));
+		} catch (Exception e) {
+			Assert.fail("OCR All Text API failed: " + e.getMessage());
+		}
+	}
+
+	@Test(priority = 4)
+	public void testCompareImages() {
+		try {
+			JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, token,
+					JsonPayload.imageCompare(rid, fileId1, fileId2), ApiEndPoints.OCR_IMAGECOMPARE, null));
+		} catch (Exception e) {
+			Assert.fail("Image Compare API failed: " + e.getMessage());
+		}
+	}
+
+	// ======================== Helper Methods ========================
+
+	private String getAccessToken() throws Exception {
+		String response = ApiMethods.executeApiCall("GET", userName, apiKey, null, null, ApiEndPoints.ACCESS_TOKEN, null);
+		if (response == null || !response.contains("\"token\"")) {
+			throw new Exception("Access token not found in response.");
+		}
+		return response.split("\"token\":\"")[1].split("\"")[0];
+	}
+
+	private String getDeviceId(String token) throws Exception {
+		String deviceListBody = JsonPayload.getDeviceListRequest(token);
+		JsonPath json = JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null, deviceListBody, ApiEndPoints.DEVICE_LIST, null));
+		String deviceId = json.getString("result.models[0].id");
+		if (deviceId == null || deviceId.isEmpty()) {
+			throw new Exception("Device ID not found.");
+		}
+		return deviceId;
+	}
+
+	private void getDeviceDetails(String token, String deviceId) throws Exception {
+		JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null,
+				JsonPayload.getDeviceDetailsRequest(token, deviceId), ApiEndPoints.GET_DEVICES_DETAILS, null));
+	}
+
+	private int bookDevice(String token, String deviceId) throws Exception {
+		JsonPath json = JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null,
+				JsonPayload.bookDeviceRequest(token, deviceId), ApiEndPoints.BOOK_DEVICE, null));
+		return json.getInt("result.rid");
+	}
+
+	private String uploadImage(String token, String filePath) throws Exception {
+		File file = new File(filePath);
+		if (!file.exists()) {
+			throw new Exception("File not found: " + filePath);
+		}
+		JsonPath json = JsonUtil.printFormattedJson(
+				ApiMethods.executeApiCall("POST", null, null, token, null,
+						ApiEndPoints.UPLOAD_IMAGE, file));
+		String fileId = json.getString("data.fileId");
+		if (fileId == null || fileId.isEmpty()) {
+			throw new Exception("File upload failed for: " + filePath);
+		}
+		return fileId;
+	}
+
+	private void releaseDevice(String token, int rid) throws Exception {
+		String releaseBody = JsonPayload.releaseDevice(token, rid);
+		JsonPath response = JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null, releaseBody, ApiEndPoints.RELEASE_DEVICE, null));
+		if (!"true".equalsIgnoreCase(response.getString("result"))) {
+			throw new Exception("Device release failed. Response: " + response.prettify());
+		}
+		System.out.println("Device has been released");
+	}
 }

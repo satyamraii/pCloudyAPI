@@ -16,7 +16,7 @@ public class ManulifeAPI {
 		String apiKey = "hmww27d3dj44rs4zmxbx8vhf";
 		String token = null;
 		int rid = -1;
-		String targetFileName = "TestmunkDemo-1683608873_Resigned1716649478.ipa";
+		String targetFileName = "TestmunkDemo-1683608873_Resigned1739633583.ipa";
 
 		try {
 			// Get Access Token
