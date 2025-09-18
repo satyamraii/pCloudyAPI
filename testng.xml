@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" configfailurepolicy="continue" name="pCloudy Suite" parallel="tests">
-	
-  <test name="Test">
-	  
-    <classes>
+<suite name="pCloudy Suite" parallel="classes" thread-count="1" configfailurepolicy="continue">
 
-       <class name="com.api.testing.main.AppiumAutomationAPI"/>
+  <test name="Test">
+    <classes>
+      <class name="com.api.testing.main.AppiumAutomationAPI"/>
       <class name="com.api.testing.main.BiometricAppInstrument"/>
       <class name="com.api.testing.main.InstrumentAppInjection"/>
       <class name="com.api.testing.main.ManulifeAPI"/>
       <class name="com.api.testing.main.NetworkSimulation"/>
       <class name="com.api.testing.main.VisualOCR"/>
-
-      <!--<class name="com.api.testing.main.XCUITestAPI"/>-->
-
-      
+      <!-- <class name="com.api.testing.main.XCUITestAPI"/> -->
     </classes>
-    
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test>
+
+</suite>
