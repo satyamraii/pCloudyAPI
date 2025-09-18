@@ -19,38 +19,35 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up JDK ${{ matrix.java-version }}
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: ${{ matrix.java-version }}
           distribution: temurin
           cache: maven
 
-      - name: Build with Maven
-        run: mvn --batch-mode clean compile
-
-      - name: Run Tests with TestNG
-        run: mvn --batch-mode test "-DsuiteXmlFile=testng.xml"
+      - name: Build & Run Tests (TestNG)
+        run: mvn --batch-mode clean verify "-DsuiteXmlFile=testng.xml"
 
       - name: Generate Allure Report
         run: mvn allure:report
 
       - name: Upload Surefire Test Reports
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: surefire-reports
           path: target/surefire-reports/
 
       - name: Upload Allure Report
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: target/site/allure-maven-plugin/
 
       - name: Upload JAR Artifacts
         if: success()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: built-jars
           path: target/*.jar
