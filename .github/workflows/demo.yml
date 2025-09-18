@@ -1,0 +1,56 @@
+name: Java CI with TestNG and Allure
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        java-version: [11, 17]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK ${{ matrix.java-version }}
+        uses: actions/setup-java@v3
+        with:
+          java-version: ${{ matrix.java-version }}
+          distribution: temurin
+          cache: maven
+
+      - name: Build with Maven
+        run: mvn --batch-mode clean compile
+
+      - name: Run Tests with TestNG
+        run: mvn --batch-mode test -DsuiteXmlFile=testng.xml
+
+      - name: Generate Allure Report
+        run: mvn allure: report
+
+      - name: Upload Surefire Test Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: surefire-reports
+          path: target/surefire-reports/
+
+      - name: Upload Allure Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: target/site/allure-maven-plugin/
+
+      - name: Upload JAR Artifacts
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: built-jars
+          path: target/*.jar
