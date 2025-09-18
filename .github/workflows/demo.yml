@@ -29,10 +29,10 @@ jobs:
         run: mvn --batch-mode clean compile
 
       - name: Run Tests with TestNG
-        run: mvn --batch-mode test -DsuiteXmlFile=testng.xml
+        run: mvn --batch-mode test "-DsuiteXmlFile=testng.xml"
 
       - name: Generate Allure Report
-        run: mvn allure: report
+        run: mvn allure:report
 
       - name: Upload Surefire Test Reports
         if: always()
