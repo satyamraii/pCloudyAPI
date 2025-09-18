@@ -23,10 +23,11 @@ public class ResignIPA {
 	public static void getAuthToken() {
 
 		String userName = "satyam.kumar@sstsinc.com";
-		String apiKey = "hmww27d3dj44rs4zmxbx8vhf";
+		String apiKey = "zq76hq3yt7v2stmzshzqp8xf";
 
 		// Get access token
 		String response = ApiMethods.executeApiCall("GET", userName, apiKey, null, null, ApiEndPoints.ACCESS_TOKEN, null);
+		System.out.println("Here is the request response: " + response );
 		token = response.split("\"token\":\"")[1].split("\"")[0];
 		System.out.println("Token: " + token);
 
@@ -37,10 +38,11 @@ public class ResignIPA {
 		//App Drive
 		String apkDrive = JsonPayload.appDrive(token);
 		JsonPath listOfApps = JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null, apkDrive, ApiEndPoints.DRIVE, null));
+		System.out.println("Request response is "+ listOfApps);
 	//	System.out.println(listOfApps);
 
 		// Extract the installed application from APK Driver response
-		targetFileName = "MiniSafari-1751874223.ipa";
+		targetFileName = "pCloudy_Appium_Demo.ipa";
 
 		// Find the file from JSON
 		Map<String, Object> matchedFile = SearchInstallAPP.findFileByName(listOfApps, targetFileName);

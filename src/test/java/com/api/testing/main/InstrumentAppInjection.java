@@ -24,7 +24,7 @@ public class InstrumentAppInjection {
 	public static void getAuthToken() {
 	    
 		String userName = "satyam.kumar@sstsinc.com";
-		String apiKey = "hmww27d3dj44rs4zmxbx8vhf";
+		String apiKey = "zq76hq3yt7v2stmzshzqp8xf";
 	    
 		String response = ApiMethods.executeApiCall("GET", userName, apiKey, null, null, ApiEndPoints.ACCESS_TOKEN, null);
 		token = response.split("\"token\":\"")[1].split("\"")[0];
@@ -39,7 +39,7 @@ public class InstrumentAppInjection {
 	//	System.out.println(listOfApps);
 
 		// Extract the installed application from APK Driver response
-		targetFileName = "QRBarcodeScanner.apk";
+		targetFileName = "qr_scanner.apk";
 
 		// Find the file from JSON
 		Map<String, Object> matchedFile = SearchInstallAPP.findFileByName(listOfApps, targetFileName);
@@ -135,7 +135,7 @@ public class InstrumentAppInjection {
 	//	System.out.println(listOfApps);
 
 		// Extract the installed application from APK Driver response
-		targetFileName = "QRBarcodeScanner_ImageInjection1751032779.apk";
+		targetFileName = "qr_scanner_ImageInjection1758000746.apk";
 
 		// Find the file from JSON
 		Map<String, Object> matchedFile = SearchInstallAPP.findFileByName(listOfApps, targetFileName);

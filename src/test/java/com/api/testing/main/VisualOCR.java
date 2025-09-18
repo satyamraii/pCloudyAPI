@@ -17,7 +17,7 @@ import io.restassured.path.json.JsonPath;
 public class VisualOCR {
 
 	private String userName = "satyam.kumar@sstsinc.com";
-	private String apiKey = "hmww27d3dj44rs4zmxbx8vhf";
+	private String apiKey = "zq76hq3yt7v2stmzshzqp8xf";
 
 	private String token;
 	private String deviceId;

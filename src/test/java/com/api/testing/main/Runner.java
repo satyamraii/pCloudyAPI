@@ -15,7 +15,7 @@ public class Runner {
 	public void androidAPITest() {
 
 		String userName="satyam.kumar@sstsinc.com";
-		String apiKey="trdwz5qr3243zvd5hxfdtp78";
+		String apiKey="zq76hq3yt7v2stmzshzqp8xf";
 
 
 		// To Get the access token

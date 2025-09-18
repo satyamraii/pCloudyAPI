@@ -25,9 +25,9 @@ public class AppiumAutomationAPI {
 	public static void getAuthToken() {
 
 		String userName = "satyam.kumar@sstsinc.com";
-		String apiKey = "hmww27d3dj44rs4zmxbx8vhf";
+		String apiKey = "zq76hq3yt7v2stmzshzqp8xf";
 
-		// Get access tokeny
+		// Get access token
 		String response = ApiMethods.executeApiCall("GET", userName, apiKey, null, null, ApiEndPoints.ACCESS_TOKEN, null);
 		token = response.split("\"token\":\"")[1].split("\"")[0];
 		System.out.println("Token: " + token);
@@ -96,7 +96,7 @@ public class AppiumAutomationAPI {
 
 		// Extract the installed application from APK Driver response
 		
-		targetFileName = "TestmunkDemo-1683608873_Resigned1739633583.ipa";
+		targetFileName = "TestmunkDemo_Resigned1754402851.ipa";
 
 		// Find the file from JSON
 		Map<String, Object> matchedFile = SearchInstallAPP.findFileByName(listOfApps, targetFileName);
@@ -144,24 +144,24 @@ public class AppiumAutomationAPI {
 		JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null, enableDeviceService, ApiEndPoints.START_DEVICESERVICE, null));
 	}
 	
-//	@Test(priority = 13)
-//	public static void getAppiumFileName() {
-//		String getAppiumFileList= JsonPayload.getAppiumFileList(token, rid);
-//		System.out.println("Request response is :" + getAppiumFileList);
-//		
-//		JsonPath getAppiumFileName= JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null, getAppiumFileList, ApiEndPoints.GET_APPIUMFILELIST, null));
-//		getFileName= getAppiumFileName.getString("result.res[1].file");
-//		System.out.println("fileName is :"+ getFileName);
-//	}
-//	
-//	@Test(priority = 14)
-//	public static void downloadAppiumPerformanceData() {
-//		
-//		String requestBody = JsonPayload.downloadAppiumData(token, rid, getFileName);
-//		System.out.println("Request response is: " + requestBody);
-//		String rawResponse = ApiMethods.executeApiCall("POST", null, null, null, requestBody, ApiEndPoints.DOWNLOAD_APPIUMACESSDATA, null);
-//		System.out.println("Raw response:\n" + rawResponse);
-//	}
+	@Test(priority = 13)
+	public static void getAppiumFileName() {
+		String getAppiumFileList= JsonPayload.getAppiumFileList(token, rid);
+		System.out.println("Request response is :" + getAppiumFileList);
+
+		JsonPath getAppiumFileName= JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null, getAppiumFileList, ApiEndPoints.GET_APPIUMFILELIST, null));
+		getFileName= getAppiumFileName.getString("result.res[1].file");
+		System.out.println("fileName is :"+ getFileName);
+	}
+
+	@Test(priority = 14)
+	public static void downloadAppiumPerformanceData() {
+
+		String requestBody = JsonPayload.downloadAppiumData(token, rid, getFileName);
+		System.out.println("Request response is: " + requestBody);
+		String rawResponse = ApiMethods.executeApiCall("POST", null, null, null, requestBody, ApiEndPoints.DOWNLOAD_APPIUMACESSDATA, null);
+		System.out.println("Raw response:\n" + rawResponse);
+	}
 	
 	@Test(priority = 15)
 	public static void getAppiumEndpoint() {

@@ -5,8 +5,16 @@
   <test name="Test">
 	  
     <classes>
-      <class name="com.api.testing.main.AppiumAutomationAPI"/>
+
+       <class name="com.api.testing.main.AppiumAutomationAPI"/>
+      <class name="com.api.testing.main.BiometricAppInstrument"/>
+      <class name="com.api.testing.main.InstrumentAppInjection"/>
+      <class name="com.api.testing.main.ManulifeAPI"/>
+      <class name="com.api.testing.main.NetworkSimulation"/>
       <class name="com.api.testing.main.VisualOCR"/>
+
+      <!--<class name="com.api.testing.main.XCUITestAPI"/>-->
+
       
     </classes>
     

@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-07T07:49:51Z" name="Default suite" finished-at="2025-07-07T07:50:22Z" duration-ms="31734">
+  <suite started-at="2025-09-16T11:53:17Z" name="Default suite" finished-at="2025-09-16T11:53:30Z" duration-ms="12809">
     <groups>
     </groups>
-    <test started-at="2025-07-07T07:49:51Z" name="Default test" finished-at="2025-07-07T07:50:22Z" duration-ms="31734">
-      <class name="com.api.testing.main.ResignIPA">
-        <test-method signature="getAuthToken()[pri:1, instance:com.api.testing.main.ResignIPA@6c4980d3]" started-at="2025-07-07T13:19:51Z" name="getAuthToken" finished-at="2025-07-07T13:20:07Z" duration-ms="16737" status="PASS">
+    <test started-at="2025-09-16T11:53:17Z" name="Default test" finished-at="2025-09-16T11:53:30Z" duration-ms="12809">
+      <class name="com.api.testing.main.Runner">
+        <test-method signature="androidAPITest()[pri:0, instance:com.api.testing.main.Runner@4ff8d125]" started-at="2025-09-16T17:23:17Z" name="androidAPITest" finished-at="2025-09-16T17:23:30Z" duration-ms="12723" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAuthToken -->
-        <test-method signature="getAvailableApps()[pri:2, instance:com.api.testing.main.ResignIPA@6c4980d3]" started-at="2025-07-07T13:20:07Z" name="getAvailableApps" finished-at="2025-07-07T13:20:19Z" duration-ms="11934" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAvailableApps -->
-        <test-method signature="initiateResign()[pri:3, instance:com.api.testing.main.ResignIPA@6c4980d3]" started-at="2025-07-07T13:20:19Z" name="initiateResign" finished-at="2025-07-07T13:20:20Z" duration-ms="884" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initiateResign -->
-        <test-method signature="resignProgress()[pri:4, instance:com.api.testing.main.ResignIPA@6c4980d3]" started-at="2025-07-07T13:20:20Z" name="resignProgress" finished-at="2025-07-07T13:20:21Z" duration-ms="488" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resignProgress -->
-        <test-method signature="resignDownload()[pri:5, instance:com.api.testing.main.ResignIPA@6c4980d3]" started-at="2025-07-07T13:20:21Z" name="resignDownload" finished-at="2025-07-07T13:20:22Z" duration-ms="1586" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resignDownload -->
-      </class> <!-- com.api.testing.main.ResignIPA -->
+        </test-method> <!-- androidAPITest -->
+      </class> <!-- com.api.testing.main.Runner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

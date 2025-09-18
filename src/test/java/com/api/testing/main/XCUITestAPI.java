@@ -23,7 +23,7 @@ public class XCUITestAPI {
 	public static void getAuthToken() {
 	    
 		String userName = "satyam.kumar@sstsinc.com";
-		String apiKey = "jpyb6557kvsbgmj82gw82vng";
+		String apiKey = "zq76hq3yt7v2stmzshzqp8xf";
 
 	    
 		String response = ApiMethods.executeApiCall("GET", userName, apiKey, null, null, ApiEndPoints.ACCESS_TOKEN, null);
@@ -100,26 +100,24 @@ public class XCUITestAPI {
 		System.out.println("StartDeviceService has been enabled");
 	}
 	
-	@Test (priority = 7)
-	public static void releaseXCTestDevice() {
-		
-		String releaseDevice = JsonPayload.releaseXCTestDevice(token, automationId);
-		System.out.println(releaseDevice);
-		
-		JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null, releaseDevice, ApiEndPoints.RELEASE_XCTESTDEVICE, null));
-		System.out.println("Device has been released successfully");
-	}
-	
-	@Test (priority = 8)
-	public static void xcTestShareableReportLink() {
-		
-		String shareableReportLink= JsonPayload.xcTestShareableReportLink(token, automationId);
-		System.out.println(shareableReportLink);
-		
-		JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null, shareableReportLink, ApiEndPoints.XCTESTSHREABLE_REPORTLINK, null));
-		System.out.println("Here is the shareable report link");
-	}
-	
-
+//	@Test (priority = 7)
+//	public static void releaseXCTestDevice() {
+//		
+//		String releaseDevice = JsonPayload.releaseXCTestDevice(token, automationId);
+//		System.out.println(releaseDevice);
+//		
+//		JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null, releaseDevice, ApiEndPoints.RELEASE_XCTESTDEVICE, null));
+//		System.out.println("Device has been released successfully");
+//	}
+//	
+//	@Test (priority = 8)
+//	public static void xcTestShareableReportLink() {
+//		
+//		String shareableReportLink= JsonPayload.xcTestShareableReportLink(token, automationId);
+//		System.out.println(shareableReportLink);
+//		
+//		JsonUtil.printFormattedJson(ApiMethods.executeApiCall("POST", null, null, null, shareableReportLink, ApiEndPoints.XCTESTSHREABLE_REPORTLINK, null));
+//		System.out.println("Here is the shareable report link");
+//	}
 
 }

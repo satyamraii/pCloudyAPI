@@ -308,7 +308,7 @@ public class JsonPayload {
     			+ "}";
     }
     
-    //Capture device-screenshot
+    //Capture device-screenshotne
     public static String captureDeviceScreenshot (String token, int rid) {
 
     	return "{\n"
@@ -549,10 +549,7 @@ public class JsonPayload {
     	           "    \"filename\": \"" + resignFileName + "\"\n" +
     	           "}";
    }
-    
-    
-    
-   
+
     //Release-device
     public static String releaseAppiumDevice (String token,int rid) {
 

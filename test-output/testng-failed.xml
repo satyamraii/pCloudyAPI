@@ -3,16 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.api.testing.main.VisualOCR">
+      <class name="com.api.testing.main.XCUITestAPI">
         <methods>
-          <include name="setup"/>
-          <include name="testGetAllOcrText"/>
-          <include name="testTextExist"/>
-          <include name="tearDown"/>
-          <include name="testCompareImages"/>
-          <include name="testTextCoordinates"/>
+          <include name="xcTestStartDeviceService"/>
         </methods>
-      </class> <!-- com.api.testing.main.VisualOCR -->
+      </class> <!-- com.api.testing.main.XCUITestAPI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
